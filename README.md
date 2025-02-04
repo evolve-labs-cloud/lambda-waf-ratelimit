@@ -156,10 +156,6 @@ The function logs extensively to CloudWatch Logs. Monitor:
 - IP Set has a maximum capacity (check AWS quotas)
 - Rate limiting depends on accurate CloudWatch Logs delivery
 
-## Contributing
 
-Please submit issues and pull requests for any improvements.
 
-## License
 
-[Specify your license here]
