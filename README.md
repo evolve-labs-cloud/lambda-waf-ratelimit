@@ -2,6 +2,17 @@
 
 This AWS Lambda function monitors WAF rate limit triggers, automatically blocks offending IP addresses, and sends notifications to Slack. The function analyzes CloudWatch Logs to identify IPs that exceed rate limits, adds them to a WAF IP set, and notifies the team through Slack.
 
+## Architecture
+
+![Architecture Diagram](architecture.png)
+
+The system architecture consists of:
+- CloudWatch Events for scheduled triggering
+- Lambda function for core processing
+- CloudWatch Logs for WAF log analysis
+- WAF and IP Set for blocking malicious IPs
+- Slack integration for team notifications
+
 ## Features
 
 - Monitors WAF rate limit rule triggers in real-time
@@ -155,7 +166,3 @@ The function logs extensively to CloudWatch Logs. Monitor:
 - Maximum query time range is limited by CloudWatch Logs query timeout
 - IP Set has a maximum capacity (check AWS quotas)
 - Rate limiting depends on accurate CloudWatch Logs delivery
-
-
-
-
